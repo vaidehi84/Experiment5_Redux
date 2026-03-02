@@ -1,0 +1,132 @@
+.contact-page { animation: fadeUp 0.5s ease both; }
+.contact-hero { text-align: center; margin-bottom: 48px; padding: 40px 0; }
+
+.eyebrow-green {
+  background: rgba(52,236,168,0.12) !important;
+  border: 1px solid rgba(52,236,168,0.3) !important;
+  color: #34eca8 !important;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-left { display: flex; flex-direction: column; gap: 14px; }
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(52,236,168,0.1);
+  border: 1px solid rgba(52,236,168,0.25);
+  color: #34eca8;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: fit-content;
+}
+.avail-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: #34eca8;
+  animation: pulse 1.8s infinite;
+}
+
+.contact-info-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 22px;
+}
+.contact-info-title { font-size: 0.88rem; font-weight: 700; color: #c8d5e8; margin-bottom: 14px; }
+
+.contact-link-list { display: flex; flex-direction: column; gap: 10px; }
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.2s;
+}
+.contact-link:hover { border-color: rgba(79,142,255,0.3); background: rgba(79,142,255,0.07); transform: translateX(4px); }
+.contact-link-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.icon-email { background: rgba(79,142,255,0.15); }
+.icon-github { background: rgba(192,132,252,0.15); }
+.icon-linkedin { background: rgba(52,236,168,0.15); }
+.contact-link-text strong { display: block; font-size: 0.75rem; color: #7a90b3; font-weight: 600; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+.contact-link-text { font-size: 0.82rem; color: #c8d5e8; }
+
+/* Form */
+.contact-form-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 28px;
+}
+.contact-form-title { font-size: 0.95rem; font-weight: 700; color: #c8d5e8; margin-bottom: 20px; }
+
+.success-toast {
+  background: rgba(52,236,168,0.12);
+  border: 1px solid rgba(52,236,168,0.3);
+  color: #34eca8;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  animation: fadeUp 0.3s ease;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.form-label { font-size: 0.75rem; font-weight: 700; color: #7a90b3; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-input, .form-textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+.form-input:focus, .form-textarea:focus { border-color: rgba(79,142,255,0.5); background: rgba(79,142,255,0.06); }
+.form-input::placeholder, .form-textarea::placeholder { color: #7a90b3; }
+.form-textarea { resize: vertical; min-height: 110px; }
+.form-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #4f8eff, #c084fc);
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  box-shadow: 0 4px 20px rgba(79,142,255,0.35);
+  margin-top: 4px;
+}
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(79,142,255,0.5); }
+
+.theme-light .contact-info-card, .theme-light .contact-form-card { background: #fff; border-color: rgba(0,0,0,0.08); }
+.theme-light .contact-link { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.06); }
+.theme-light .contact-link-text { color: #0a0f1e; }
+.theme-light .form-input, .theme-light .form-textarea { background: #f8faff; border-color: rgba(0,0,0,0.12); color: #0a0f1e; }
+.theme-light .contact-info-title, .theme-light .contact-form-title { color: #0a0f1e; }
